@@ -37,7 +37,7 @@ public class LoginV extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(null, "Correo o la Contraseña incorrecta");
             }
-        }
+        }}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -136,7 +136,7 @@ public class LoginV extends javax.swing.JFrame {
                 btnValidarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnValidar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
+        jPanel2.add(btnValidar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
 
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -144,7 +144,7 @@ public class LoginV extends javax.swing.JFrame {
                 btnSalirActionPerformed(evt);
             }
         });
-        jPanel2.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, -1, -1));
+        jPanel2.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 320, 420));
 
@@ -173,7 +173,7 @@ public class LoginV extends javax.swing.JFrame {
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+        System.exit(1);
     }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
@@ -230,7 +230,5 @@ public class LoginV extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 
-    private void initComponents() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+  
 }
