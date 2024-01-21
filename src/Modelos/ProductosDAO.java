@@ -159,4 +159,28 @@ public class ProductosDAO {
         return pr;
     }
    
+    public boolean ModificarDatos(Config confi){  //Declaramos el método para modificar productos de la BD
+       
+       String sql = "UPDATE config SET ruc=?, nombre=?, telefono=?, direccion=?, mensaje=? WHERE id=?";  // Sentencia SQL para modificar los campos del producto en la BD
+       try {  // Usamos un bloque try-catch-finally para manejar posibles excepciones de tipo SQLException
+           ps = con.prepareStatement(sql);
+           ps.setString(1, confi.getRif());
+           ps.setString(2, confi.getNombre());  
+           ps.setInt(3, confi.getTelefono()); // Asignamos valores a los atributos del parámetro pro a los signos de interrogación de la sentencia SQL usando los métodos setString, setInt, y setDouble del objeto p
+           ps.setString(4, confi.getDireccion());  
+           ps.setString(5, confi.getMensaje());
+           ps.setInt(6, confi.getId());
+           ps.execute();  // Ejecutamos la sentencia SQL usando el método execute
+           return true;
+       } catch (SQLException e) {  // Inicio del bloque catch, donde está el código a ejecutar si se produce una excepción de tipo SQLException.
+           System.out.println(e.toString());
+           return false;
+       }finally{
+           try {  // Usamos otro bloque try-catch para manejar otra posible excepción de tipo SQLException
+               con.close();
+           } catch (SQLException e) {
+               System.out.println(e.toString());
+           }
+       }
+    }  //Final del método ModificarProductos
 }

@@ -16,7 +16,7 @@ public class Conexion {
     public Connection getConnection() {
         try {
             String myBD = "jdbc:mysql://localhost:3306/sis_java?serverTimezone=UTC";//direccion de la BD
-            con = DriverManager.getConnection(myBD, "root", "");// Datos de la BD
+            con = DriverManager.getConnection(myBD, "root", "alejandro");// Datos de la BD
             return con;
         } catch (SQLException e) {
             System.out.println(e.toString());//Mensaje en caso de errores
